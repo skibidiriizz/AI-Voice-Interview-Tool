@@ -2,8 +2,12 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from openai import OpenAI
+from dotenv import load_dotenv
 import os
 import base64
+
+# Load environment variables from parent directory
+load_dotenv(dotenv_path='../.env')
 import tempfile
 import json
 from typing import List, Dict, Any
